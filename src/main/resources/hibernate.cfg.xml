@@ -24,6 +24,9 @@
 
         <!-- Optional: automatic session context -->
         <property name="current_session_context_class">thread</property>
+        <mapping class="com.hms.user.model.User"/>
+        <mapping class="com.hms.billing.model.Bill"/>
+
 
     </session-factory>
 </hibernate-configuration>

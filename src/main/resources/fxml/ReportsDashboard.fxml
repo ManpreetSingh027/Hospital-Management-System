@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.hms.user.controller.ReportsDashboardController"
+            prefWidth="600.0" prefHeight="400.0" stylesheets="@/styles/app.css">
+    <children>
+        <VBox spacing="20" layoutX="200.0" layoutY="100.0">
+            <children>
+                <Text text="Reports Dashboard" style="-fx-font-size: 24px;"/>
+                <Button text="Patient History Report" onAction="#handlePatientHistoryReport" prefWidth="200"/>
+                <Button text="Billing Report" onAction="#handleBillingReport" prefWidth="200"/>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

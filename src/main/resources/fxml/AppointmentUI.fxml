@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.hms.appointment.controller.AppointmentController"
+            prefWidth="600.0" prefHeight="400.0" stylesheets="@/styles/app.css">
+    <children>
+        <VBox spacing="15" layoutX="50.0" layoutY="30.0">
+            <children>
+                <Label text="Schedule an Appointment" style="-fx-font-size: 20px;"/>
+
+                <Label text="Select Patient:"/>
+                <ComboBox fx:id="patientComboBox" prefWidth="300.0"/>
+
+                <Label text="Select Doctor:"/>
+                <ComboBox fx:id="doctorComboBox" prefWidth="300.0"/>
+
+                <Label text="Select Date:"/>
+                <DatePicker fx:id="appointmentDatePicker" prefWidth="300.0"/>
+
+                <Label text="Enter Time (e.g., 14:00):"/>
+                <TextField fx:id="timeField" prefWidth="300.0" promptText="HH:mm"/>
+
+                <Label text="Reason:"/>
+                <TextField fx:id="reasonField" prefWidth="300.0" promptText="Reason for appointment"/>
+
+                <Button text="Schedule Appointment" onAction="#handleScheduleAppointment" prefWidth="200"/>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

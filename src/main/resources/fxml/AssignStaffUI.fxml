@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.hms.assignment.controller.AssignStaffController"
+            prefWidth="400.0" prefHeight="300.0" stylesheets="@/styles/app.css">
+    <children>
+        <VBox spacing="15" layoutX="50.0" layoutY="30.0">
+            <children>
+                <Label text="Assign Staff to Patient" style="-fx-font-size: 18px;"/>
+                <Label text="Select Patient:"/>
+                <ComboBox fx:id="patientComboBox" prefWidth="300.0"/>
+                <Label text="Select Doctor:"/>
+                <ComboBox fx:id="doctorComboBox" prefWidth="300.0"/>
+                <Label text="Select Nurse:"/>
+                <ComboBox fx:id="nurseComboBox" prefWidth="300.0"/>
+                <Button text="Assign Staff" onAction="#handleAssignStaff" prefWidth="150"/>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
