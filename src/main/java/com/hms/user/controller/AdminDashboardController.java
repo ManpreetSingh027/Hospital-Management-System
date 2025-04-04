@@ -23,15 +23,48 @@ public class AdminDashboardController {
         }
     }
 
-    // Navigates to the View Users UI
-    public void handleViewUsers(ActionEvent event) {
+    // Navigates to the Add Doctor UI
+    public void handleAddDoctor(ActionEvent event) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/fxml/ViewUsersUI.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/fxml/AddDoctorUI.fxml"));
             Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
             scene.getStylesheets().add(getClass().getResource("/styles/app.css").toExternalForm());
             stage.setScene(scene);
-            stage.setTitle("View Users");
+            stage.setTitle("Add Doctor");
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Navigates to the Delete Doctor UI
+
+
+    // Navigates to the Doctor List UI
+    public void handleDoctorList(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/fxml/DoctorListUI.fxml"));
+            Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add(getClass().getResource("/styles/app.css").toExternalForm());
+            stage.setScene(scene);
+            stage.setTitle("Doctor List");
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Navigates to the Patient List UI
+    public void handlePatientList(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/fxml/PatientListUI.fxml"));
+            Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add(getClass().getResource("/styles/app.css").toExternalForm());
+            stage.setScene(scene);
+            stage.setTitle("Patient List");
             stage.show();
         } catch (Exception e) {
             e.printStackTrace();
@@ -52,32 +85,12 @@ public class AdminDashboardController {
             e.printStackTrace();
         }
     }
-    public void handleAssignStaff(ActionEvent event) {
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource("/fxml/AssignStaffUI.fxml"));
-            Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            scene.getStylesheets().add(getClass().getResource("/styles/app.css").toExternalForm());
-            stage.setScene(scene);
-            stage.setTitle("Assign Staff to Patient");
-            stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-    public void handleAppointments(ActionEvent event) {
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource("/fxml/AppointmentUI.fxml"));
-            Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            scene.getStylesheets().add(getClass().getResource("/styles/app.css").toExternalForm());
-            stage.setScene(scene);
-            stage.setTitle("Manage Appointments");
-            stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+
+
+
+
+
+    // Navigates to the Billing UI
     public void handleBilling(ActionEvent event) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/fxml/BillingUI.fxml"));
@@ -92,5 +105,18 @@ public class AdminDashboardController {
         }
     }
 
-
+    // Navigates back to the Common Menu
+    public void handleBack(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/fxml/LoginApp.fxml"));
+            Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add(getClass().getResource("/styles/app.css").toExternalForm());
+            stage.setScene(scene);
+            stage.setTitle("Admin Login");
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

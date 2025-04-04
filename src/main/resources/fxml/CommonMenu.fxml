@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.text.Text?>
+
+<VBox spacing="20" alignment="CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="com.hms.ui.CommonMenuController">
+    <!-- Header Text -->
+    <Text text="Welcome to Hospital Management System" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+    <!-- Navigation Buttons -->
+    <Button text="Admin Login" onAction="#handleAdminLogin" prefWidth="200" />
+    <Button text="Patient Registration" onAction="#handlePatientRegistration" prefWidth="200" />
+    <Button text="Doctor Login" onAction="#handleDoctorLogin" prefWidth="200" />
+</VBox>

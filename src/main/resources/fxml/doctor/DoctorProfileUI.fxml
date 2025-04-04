@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.hms.doctor.controller.DoctorProfileController"
+            prefWidth="600.0" prefHeight="400.0" stylesheets="@/styles/app.css">
+    <children>
+        <VBox spacing="10" layoutX="50.0" layoutY="30.0">
+            <children>
+                <Label text="Doctor Profile &amp; Availability" style="-fx-font-size: 24px;"/>
+                <Label text="Name:"/>
+                <TextField fx:id="nameField" promptText="Enter Name"/>
+                <Label text="Specialization:"/>
+                <TextField fx:id="specializationField" promptText="Enter Specialization"/>
+                <Label text="Availability:"/>
+                <TextField fx:id="availabilityField" promptText="Enter Available Time Slots"/>
+                <Button text="Update Profile" onAction="#handleUpdateProfile" prefWidth="150"/>
+                <Button text="Back" onAction="#handleBack" prefWidth="100"/>
+                <Label fx:id="feedbackLabel" textFill="green"/>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

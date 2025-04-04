@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.hms.patient.controller.PatientPrescriptionsController"
+            prefWidth="600.0" prefHeight="500.0" stylesheets="@/styles/app.css">
+    <children>
+        <VBox spacing="10" layoutX="20.0" layoutY="20.0" prefWidth="560.0" prefHeight="500.0">
+            <children>
+                <Text text="My Prescriptions" style="-fx-font-size: 24px;"/>
+                <!-- TableView with a column for Pay Bill button -->
+                <TableView fx:id="prescriptionsTable" prefWidth="560.0" prefHeight="350.0">
+                    <columns>
+                        <TableColumn fx:id="idColumn" text="ID" prefWidth="50.0"/>
+                        <TableColumn fx:id="doctorColumn" text="Doctor" prefWidth="100.0"/>
+                        <TableColumn fx:id="dateColumn" text="Date" prefWidth="100.0"/>
+                        <TableColumn fx:id="medicationColumn" text="Medication" prefWidth="150.0"/>
+                        <TableColumn fx:id="dosageColumn" text="Dosage" prefWidth="80.0"/>
+                        <TableColumn fx:id="instructionsColumn" text="Instructions" prefWidth="80.0"/>
+                        <TableColumn fx:id="payColumn" text="Pay Bill" prefWidth="100.0"/>
+                    </columns>
+                </TableView>
+                <!-- Back button placed below the table -->
+                <HBox spacing="10" alignment="CENTER">
+                    <Button text="Back" onAction="#handleBack" prefWidth="100"/>
+                </HBox>
+            </children>
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>

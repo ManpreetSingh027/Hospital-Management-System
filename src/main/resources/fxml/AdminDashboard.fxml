@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.hms.user.controller.AdminDashboardController"
-            prefWidth="600.0" prefHeight="400.0" stylesheets="@/styles/app.css">
+            prefWidth="600.0" prefHeight="500.0" stylesheets="@/styles/app.css">
     <children>
+        <!-- Back Button -->
+        <Button text="Back" layoutX="10.0" layoutY="10.0" onAction="#handleBack"/>
+
         <!-- Header Text -->
         <Text text="Admin Dashboard" layoutX="200.0" layoutY="40.0" style="-fx-font-size: 24px;"/>
 
-        <!-- Navigation Buttons -->
-        <HBox spacing="20" layoutX="50.0" layoutY="100.0">
+        <!-- Navigation Buttons arranged vertically -->
+        <VBox spacing="10" layoutX="50.0" layoutY="100.0">
             <children>
-                <Button text="Add User" onAction="#handleAddUser" prefWidth="120"/>
-                <Button text="View Users" onAction="#handleViewUsers" prefWidth="120"/>
-                <Button text="Assign Staff" onAction="#handleAssignStaff" prefWidth="120"/>
-                <Button text="Reports" onAction="#handleReports" prefWidth="120"/>
-                <Button text="Manage Appointments" onAction="#handleAppointments" prefWidth="120"/>
-                <Button text="Billing" onAction="#handleBilling" prefWidth="120"/>
+                <Button text="Add User" onAction="#handleAddUser" prefWidth="150"/>
+                <Button text="Add Doctor" onAction="#handleAddDoctor" prefWidth="150"/>
+
+                <Button text="Doctor List" onAction="#handleDoctorList" prefWidth="150"/>
+                <Button text="Patient List" onAction="#handlePatientList" prefWidth="150"/>
+
+                <Button text="Reports" onAction="#handleReports" prefWidth="150"/>
+
+                <Button text="Billing" onAction="#handleBilling" prefWidth="150"/>
             </children>
-        </HBox>
+        </VBox>
     </children>
 </AnchorPane>

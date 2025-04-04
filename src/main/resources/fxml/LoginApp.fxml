@@ -7,6 +7,9 @@
 
 <AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.hms.authentication.controller.LoginController" prefHeight="300.0" prefWidth="400.0">
     <children>
+        <!-- Header Label for Admin Login -->
+        <Label text="Admin Login" layoutX="150.0" layoutY="10.0" style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
         <TextField fx:id="usernameField" layoutX="100.0" layoutY="50.0" promptText="Username" />
         <PasswordField fx:id="passwordField" layoutX="100.0" layoutY="100.0" promptText="Password" />
         <Button text="Login" layoutX="100.0" layoutY="150.0" onAction="#handleLogin" />

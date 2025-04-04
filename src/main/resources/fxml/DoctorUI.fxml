@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.hms.doctor.controller.DoctorController"
+            prefWidth="600.0" prefHeight="400.0" stylesheets="@/styles/app.css">
+    <children>
+        <!-- Header -->
+        <Text text="Doctor Dashboard" layoutX="230.0" layoutY="30.0" style="-fx-font-size: 24px;"/>
+
+        <!-- TableView for Assigned Patients -->
+        <TableView fx:id="patientTable" layoutX="20.0" layoutY="60.0" prefWidth="560.0" prefHeight="320.0">
+            <columns>
+                <TableColumn fx:id="patientIdColumn" text="Patient ID" prefWidth="100.0"/>
+                <TableColumn fx:id="patientNameColumn" text="Patient Name" prefWidth="200.0"/>
+                <TableColumn fx:id="diagnosisColumn" text="Diagnosis" prefWidth="150.0"/>
+                <TableColumn fx:id="viewRecordColumn" text="View Record" prefWidth="110.0"/>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

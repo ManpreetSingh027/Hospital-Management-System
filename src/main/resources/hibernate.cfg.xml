@@ -26,6 +26,12 @@
         <property name="current_session_context_class">thread</property>
         <mapping class="com.hms.user.model.User"/>
         <mapping class="com.hms.billing.model.Bill"/>
+        <mapping class="com.hms.patient.model.Patient"/>
+        <mapping class="com.hms.appointment.model.Appointment"/>
+        <mapping class="com.hms.prescription.model.Prescription"/>
+        <mapping class="com.hms.doctor.model.Doctor"/>
+
+
 
 
     </session-factory>

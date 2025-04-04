@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.hms.patient.controller.PatientAppointmentsController"
+            prefWidth="600.0" prefHeight="450.0" stylesheets="@/styles/app.css">
+    <children>
+        <VBox spacing="10" layoutX="20.0" layoutY="20.0">
+            <children>
+                <Text text="My Appointments" style="-fx-font-size: 24px;"/>
+                <TableView fx:id="appointmentsTable" prefWidth="560.0" prefHeight="320.0">
+                    <columns>
+                        <TableColumn fx:id="idColumn" text="ID" prefWidth="50.0"/>
+                        <TableColumn fx:id="doctorColumn" text="Doctor" prefWidth="150.0"/>
+                        <TableColumn fx:id="dateColumn" text="Date" prefWidth="150.0"/>
+                        <TableColumn fx:id="timeColumn" text="Time" prefWidth="100.0"/>
+                        <TableColumn fx:id="reasonColumn" text="Reason" prefWidth="100.0"/>
+                    </columns>
+                </TableView>
+                <Button text="Back" onAction="#handleBack" prefWidth="100"/>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
